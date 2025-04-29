@@ -1,46 +1,15 @@
-<think>The user is asking me to rewrite the README.md file for their project called "Devowser". Let me analyze the current readme and the project files to understand what a good rewrite would include.
-
-The current README.md has:
-1. A brief description of the tool
-2. Features list
-3. Requirements
-4. Installation instructions
-5. Usage section (which appears incomplete)
-
-From the other files I can see:
-- This is a browser automation tool that uses Selenium to launch Chrome browser instances
-- It tries to bypass anti-bot detection
-- It has a build process for Windows (build-win.py and build-win.cmd)
-- The app.py is the main application file
-
-For a better README, I should:
-1. Improve the description to be more informative
-2. Ensure the features list is complete
-3. Update requirements based on the actual code
-4. Complete the usage section
-5. Add sections for building the executable since there's a build script
-6. Add some other common README sections like "How it works" and "License"
-
-I'll rewrite the README to be more comprehensive while keeping the core information.</think># Devowser
+## Devowser
 
 A lightweight, undetectable browser automation tool that launches a Chrome browser instance without triggering anti-bot detection systems. Devowser helps you automate browsing tasks while maintaining a natural browsing profile.
 
 ## Features
 
 - Launches a clean Chrome browser instance without detectable automation flags
-- Bypasses common anti-bot and automation detection mechanisms
-- Runs silently without console window in background
-- Provides a seamless browsing experience with realistic user-agent
-- Windows compatible with easy executable build process
-- Minimalistic and lightweight design
+- Clears cookies and settings on each run
+- Maintains a natural browsing profile to avoid detection
+- Works with standard Chrome browser installations
+- Lightweight with minimal resource usage
 
-## How It Works
-
-Devowser uses a customized Selenium WebDriver configuration that:
-- Disables automation-related flags and signatures
-- Uses a realistic user agent string
-- Hides console windows and automation indicators
-- Manages browser processes to appear like regular browser usage
 
 ## Requirements
 
@@ -104,7 +73,3 @@ To customize browser behavior, modify the `app.py` file:
 ## Legal Disclaimer
 
 This tool is provided for educational and research purposes only. Users are responsible for complying with all applicable laws and website terms of service when using Devowser. The developers assume no liability for misuse of this software.
-
-## License
-
-[MIT License](LICENSE)

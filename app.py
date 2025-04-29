@@ -37,17 +37,7 @@ if __name__ == "__main__":
         # Open Google search
         driver.get("https://www.google.com/")
 
-        # Add a delay to appear more human-like
-        time.sleep(2)
-
-        # Keep browser window open
-        while True:
-            try:
-                time.sleep(1)  # Check every second if browser is still open
-                if not driver.service.process:
-                    break
-            except:
-                break
+        input("Press Enter to close browser...")
 
     except Exception as e:
         print(f"Error occurred: {e}", file=sys.stderr)
