@@ -27,8 +27,6 @@ if __name__ == "__main__":
     chrome_options = Options()
     chrome_options.add_argument('--user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"')
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
 
     try:
         # Initialize the Chrome driver with options
@@ -37,7 +35,18 @@ if __name__ == "__main__":
         # Open Google search
         driver.get("https://www.google.com/")
 
-        input("Press Enter to close browser...")
+        # Keep browser window open
+        while True:
+            time.sleep(1)  # Check every second if browser is still open
+            try:
+                # Check if browser window still exists
+                driver.current_url  # This will throw an exception if browser is closed
+                if not driver.service.process:
+                    print("Browser process no longer running")
+                    break
+            except Exception:
+                print("Browser window closed")
+                break
 
     except Exception as e:
         print(f"Error occurred: {e}", file=sys.stderr)
