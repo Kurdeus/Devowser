@@ -1,6 +1,6 @@
 ## Devowser
 
-A lightweight, undetectable browser automation tool that launches a Chrome browser instance without triggering anti-bot detection systems. Devowser helps you automate browsing tasks while maintaining a natural browsing profile.
+a lightweight and undetectable browser automation tool that uses Chrome to perform browsing tasks, It ensures a clean browsing profile and minimal resource usage.
 
 ## Features
 
